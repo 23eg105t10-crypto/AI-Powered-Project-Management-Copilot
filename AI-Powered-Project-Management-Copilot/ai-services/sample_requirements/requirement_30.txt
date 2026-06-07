@@ -1,0 +1,1 @@
+Finance expense tracker with budgets, receipts OCR, monthly reports and anomaly detection. Sample document 30. Include security, deployment, analytics, timeline and risks.

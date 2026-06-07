@@ -1,0 +1,43 @@
+{
+  "name": "Client Email Update",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "client_email_update",
+        "responseMode": "lastNode"
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "return [{json:{status:'processed', workflow:'client_email_update'}}];"
+      },
+      "name": "Process",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Process",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

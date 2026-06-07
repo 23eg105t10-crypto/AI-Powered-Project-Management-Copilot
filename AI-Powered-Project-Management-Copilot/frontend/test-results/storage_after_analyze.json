@@ -1,0 +1,106 @@
+{
+  "latest": {
+    "summary": "This is a mocked executive summary from E2E test.",
+    "milestones": [
+      "M1: Setup",
+      "M2: MVP",
+      "M3: Launch"
+    ],
+    "risks": [
+      {
+        "name": "Data Loss",
+        "severity": "High",
+        "mitigation": "Backups"
+      },
+      {
+        "name": "Late API",
+        "severity": "Medium",
+        "mitigation": "Stubs"
+      }
+    ],
+    "projects": [
+      {
+        "id": 1,
+        "title": "E2E Project"
+      }
+    ],
+    "completion": "10%",
+    "cost": 2.34,
+    "velocity": "12 pts",
+    "riskSeverity": "Medium",
+    "aiRequests": 5,
+    "activity": [
+      "Agent created tasks",
+      "Agent flagged risk"
+    ],
+    "chartData": [
+      {
+        "name": "Mon",
+        "val": 10
+      },
+      {
+        "name": "Tue",
+        "val": 20
+      }
+    ],
+    "score": 58,
+    "title": "E2E Project",
+    "projectTitle": "E2E Project",
+    "requirements": "Client Requirements:\nClient needs a secure project management portal with dashboards, tasks, milestones, weekly reports, email updates, role-based access, and deployment-ready documentation.\n\nProject Context:\n\n* Project Name: E2E Project\n\n* Team Size: 6\n\n* Budget: 100000\n\n* Deadline: 2026-12-31\n\n* Preferred Tech Stack: React, Node\n\n* Sprint Duration: 2 weeks\n\n* Security Requirements: OWASP\n\n* Deployment Preference: AWS\n\n* Client Priority: High\n\n* Risk Tolerance: Medium\n\n* Compliance Requirements: SOC2\n\n* Integrations Required: Stripe, Slack",
+    "intake": {
+      "clientRequirements": "Client needs a secure project management portal with dashboards, tasks, milestones, weekly reports, email updates, role-based access, and deployment-ready documentation.",
+      "projectName": "E2E Project",
+      "teamSize": "6",
+      "budget": "100000",
+      "deadline": "2026-12-31",
+      "techStack": "React, Node",
+      "sprintDuration": 2,
+      "securityRequirements": "OWASP",
+      "deploymentPreference": "AWS",
+      "clientPriority": "High",
+      "riskTolerance": "Medium",
+      "complianceRequirements": "SOC2",
+      "integrationsRequired": "Stripe, Slack"
+    },
+    "requirementSummary": "This is a mocked executive summary from E2E test.",
+    "missingInformation": [
+      "Confirm final third-party integrations, approval workflow, and production SLA."
+    ],
+    "tasks": [
+      "Finalize client requirements and acceptance criteria",
+      "Design solution architecture and data model",
+      "Build authenticated user workflows",
+      "Implement core project dashboard and task management",
+      "Integrate AI analysis, reporting, and workflow automation",
+      "Run security, QA, deployment, and client handoff"
+    ],
+    "timeline": [
+      "M1: Setup",
+      "M2: MVP",
+      "M3: Launch"
+    ],
+    "teamAllocation": [
+      "Project Manager: client communication, scope, sprint planning",
+      "Frontend Engineer: dashboard, workspace, reports, workflow UI",
+      "Backend Engineer: API, auth, data persistence, integrations",
+      "QA/Security: test coverage, OWASP checks, release readiness"
+    ],
+    "weeklyReportSummary": "E2E Project is ready for structured delivery. Current plan focuses on discovery, MVP build, risk controls, and deployment readiness.",
+    "emailUpdate": "Subject: E2E Project project update\n\nHello, the AI intake is complete. We have converted your requirements into tasks, milestones, risk mitigations, and team assignments. The next step is scope confirmation and sprint kickoff.",
+    "evaluationMetrics": {
+      "accuracy": "91%",
+      "relevance": "94%",
+      "faithfulness": "92%",
+      "hallucinationRate": "3%"
+    },
+    "projectHealthScore": 58,
+    "projectDurationDays": 210,
+    "estimatedDelivery": "2026-12-31",
+    "costPerRequest": 2.34,
+    "latency": "420 ms",
+    "scope": "Deliver E2E Project using React, Node with OWASP security, AWS deployment, and 2-week sprint planning."
+  },
+  "logs": [
+    "2026-06-04T00:30:36.223Z - AI intake run for E2E Project"
+  ]
+}

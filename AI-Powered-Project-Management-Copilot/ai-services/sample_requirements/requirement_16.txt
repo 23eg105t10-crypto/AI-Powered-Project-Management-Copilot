@@ -1,0 +1,1 @@
+Food delivery app with restaurant dashboard, order tracking, coupons and delivery partner allocation. Sample document 16. Include security, deployment, analytics, timeline and risks.

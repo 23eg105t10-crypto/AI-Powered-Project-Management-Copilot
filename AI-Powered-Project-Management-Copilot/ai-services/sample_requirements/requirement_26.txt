@@ -1,0 +1,1 @@
+E-commerce platform with cart, payment, inventory, admin analytics and email notifications. Sample document 26. Include security, deployment, analytics, timeline and risks.

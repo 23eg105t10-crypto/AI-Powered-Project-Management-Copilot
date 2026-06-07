@@ -1,0 +1,46 @@
+{
+  "summary": "This is a mocked executive summary from E2E test.",
+  "milestones": [
+    "M1: Setup",
+    "M2: MVP",
+    "M3: Launch"
+  ],
+  "risks": [
+    {
+      "name": "Data Loss",
+      "severity": "High",
+      "mitigation": "Backups"
+    },
+    {
+      "name": "Late API",
+      "severity": "Medium",
+      "mitigation": "Stubs"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E2E Project"
+    }
+  ],
+  "completion": "10%",
+  "cost": 2.34,
+  "velocity": "12 pts",
+  "riskSeverity": "Medium",
+  "aiRequests": 5,
+  "activity": [
+    "Agent created tasks",
+    "Agent flagged risk"
+  ],
+  "chartData": [
+    {
+      "name": "Mon",
+      "val": 10
+    },
+    {
+      "name": "Tue",
+      "val": 20
+    }
+  ],
+  "score": 58
+}

@@ -1,0 +1,1 @@
+Healthcare appointment booking system with patient login, doctor dashboard, prescriptions and reminders. Sample document 7. Include security, deployment, analytics, timeline and risks.

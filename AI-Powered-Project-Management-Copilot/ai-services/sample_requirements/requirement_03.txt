@@ -1,0 +1,1 @@
+College placement portal with student profiles, recruiter login, drives, reports and role-based access. Sample document 3. Include security, deployment, analytics, timeline and risks.

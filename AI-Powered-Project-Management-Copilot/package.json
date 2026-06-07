@@ -1,0 +1,13 @@
+{
+  "name": "ai-powered-project-management-copilot-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend && pip install -r ai-services/requirements.txt",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\" \"uvicorn main:app --app-dir ai-services --reload --port 8000\"",
+    "docker:up": "docker compose -f docker-compose.yml up --build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

@@ -1,0 +1,23 @@
+services:
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]
+    volumes: ["mongo_data:/data/db"]
+  backend:
+    build: ./backend
+    ports: ["5000:5000"]
+    env_file: .env.example
+    depends_on: [mongo, ai]
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/pm_copilot
+      AI_SERVICE_URL: http://ai:8000
+  ai:
+    build: ./ai-services
+    ports: ["8000:8000"]
+  frontend:
+    build: ./frontend
+    ports: ["5173:5173"]
+    environment:
+      VITE_API_URL: http://localhost:5000
+volumes:
+  mongo_data:
