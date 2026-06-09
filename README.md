@@ -80,19 +80,12 @@ deployment/    → Deployment Configurations
 ## Architecture Design
 
 Client Requirements
-↓
-React Frontend
-↓
-Node.js Backend
-↓
-Multi-Agent AI Engine
-↓
-Tasks + Risks + Reports
-↓
-MongoDB Database
-↓
-Dashboard & Analytics
-
+→ React Frontend
+→ Node.js Backend
+→ Multi-Agent AI Engine
+→ Tasks / Risks / Reports
+→ MongoDB Database
+→ Dashboard & Analytics
 ## How It Works
 
 1. User logs in.
