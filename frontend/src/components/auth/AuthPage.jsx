@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { BarChart3, Bot, ClipboardList, Sparkles } from 'lucide-react';
 import axios from 'axios';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API = import.meta.env.VITE_API_URL || '';
 
 const FEATURES = [
   {

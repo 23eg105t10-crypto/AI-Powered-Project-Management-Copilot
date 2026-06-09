@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import "./style.css";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API = import.meta.env.VITE_API_URL || "";
 
 function getUser() {
   try { return JSON.parse(localStorage.getItem("user") || "null"); }

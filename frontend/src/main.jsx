@@ -18,7 +18,7 @@ import { buildEvaluationReportLines, formatEvaluationMetrics } from "./component
 import AuthPage from "./components/auth/AuthPage";
 import "./style.css";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API = import.meta.env.VITE_API_URL || "";
 
 const safeParse = (key, fallback = null) => {
   try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); } catch { return fallback; }

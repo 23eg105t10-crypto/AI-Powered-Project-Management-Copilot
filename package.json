@@ -2,12 +2,29 @@
   "name": "ai-powered-project-management-copilot-monorepo",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "install:all": "npm install --prefix backend && npm install --prefix frontend && pip install -r ai-services/requirements.txt",
-    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\" \"uvicorn main:app --app-dir ai-services --reload --port 8000\"",
-    "docker:up": "docker compose -f docker-compose.yml up --build"
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "start": "node backend/src/server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "validator": "^13.12.0"
   },
   "devDependencies": {
-    "concurrently": "^9.0.1"
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.9"
   }
 }

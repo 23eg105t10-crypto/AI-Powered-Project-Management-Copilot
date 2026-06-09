@@ -13,14 +13,24 @@ import mongoose from "mongoose";
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: [/^http:\/\/localhost:\d+$/, /^http:\/\/127\.0\.0\.1:\d+$/, "http://localhost:5173"], credentials: true }));
+app.use(cors({ 
+  origin: [
+    /^http:\/\/localhost:\d+$/, 
+    /^http:\/\/127\.0\.0\.1:\d+$/, 
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+    process.env.CLIENT_URL
+  ].filter(Boolean), 
+  credentials: true 
+}));
 app.use(express.json({ limit: "2mb" }));
 app.use(morgan("dev"));
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }));
 
-app.get("/health", (_, res) => {
+app.get("/api/health", (_, res) => {
   const dbStatus = mongoose.connection.readyState === 1 ? 'connected' : 'disconnected';
-  res.json({ ok: true, service: "pm-copilot-backend", db: dbStatus, mongo: mongoose.connection.readyState === 1 });
+  res.json({ status: "ok", database: dbStatus });
 });
 app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);

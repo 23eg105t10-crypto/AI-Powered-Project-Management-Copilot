@@ -108,36 +108,31 @@ AI_SERVICE_URL=http://localhost:8000
 N8N_WEBHOOK_URL=http://localhost:5678/webhook/project-copilot
 ```
 
-## Installation Steps
+## Vercel Monorepo Deployment
 
-### Clone Repository
+This project is configured as a Vercel-deployable monorepo. The frontend and backend are deployed together.
 
-git clone https://github.com/23eg105t10-crypto/AI-Powered-Project-Management-Copilot.git
-cd AI-Powered-Project-Management-Copilot
+### Deployment Steps:
 
+1. **Import Repository**: Import your GitHub repository in Vercel.
+2. **Project Settings**:
+   - **Framework Preset**: Other (or Vite)
+   - **Root Directory**: `.` (Keep as root)
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `frontend/dist`
+3. **Environment Variables**: Add the following variables in Vercel:
+   - `MONGODB_URI`: Your MongoDB Atlas connection string.
+   - `JWT_SECRET`: A secure random string for JWT.
+   - `NODE_ENV`: `production`
+   - `CLIENT_URL`: `https://your-vercel-domain.vercel.app`
+   - `AI_SERVICE_URL`: (Optional) URL of your AI service if deployed separately.
+4. **Deploy**: Click Deploy.
 
-### Run Backend
+### Local Development:
 
-cd backend
-npm install
-npm run dev
-
-
-### Run AI Service
-
-cd ../ai-services
-source venv/Scripts/activate
-uvicorn main:app --reload --port 8000
-
-### Run Frontend
-
-cd ../frontend
-npm install
-npm run dev
-
-Open:
-
-http://localhost:5173
+- **Backend**: `cd backend && npm run dev`
+- **Frontend**: `cd frontend && npm run dev`
+- **Monorepo Dev**: `npm run dev` (Runs both)
 
 ---
 
