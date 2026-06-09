@@ -1,92 +1,230 @@
 # AI-Powered Project Management Copilot
 
-A resume-worthy full-stack AI project that converts client requirements into tasks, timelines, milestones, risks, team allocation, weekly reports, and client email updates.
+## Problem Statement
+
+Project managers spend a lot of time manually converting client requirements into tasks, timelines, risks, reports, and team allocation. This project solves that by using AI agents to automate project planning.
+
+## Project Title
+
+AI-Powered Project Management Copilot
+
+## Demo Link
+
+YouTube Demo: https://youtu.be/WHGDY8qOkcg
 
 ## Tech Stack
 
-- Frontend: React, Tailwind CSS, ShadCN-style components, Recharts
-- Backend: Node.js, Express, MongoDB, JWT, RBAC
-- AI service: FastAPI, LangChain/LangGraph-ready architecture, ChromaDB-style local vector store fallback
-- Automation: n8n sample workflows
-- Deployment: Vercel frontend, Render backend, Docker Compose
+Frontend:
+- React.js
+- Tailwind CSS
+- Recharts
 
-## Features
+Backend:
+- Node.js
+- Express.js
 
-- Authentication with roles: Admin, Project Manager, Developer, Viewer
-- Requirement analyzer with document/text ingestion
-- Multi-agent workflow simulation: requirement, task, timeline, risk, allocation, report, email, evaluation, security agents
-- Kanban/table/timeline task views
-- Analytics dashboard with risk, completion, latency, cost, evaluation metrics, audit logs
-- Weekly report and email generator
-- Prompt injection checks, input validation, rate limiting, secure upload validation, Helmet, CORS
-- n8n workflows for reports, email, Slack, Jira/Trello sync
-- 30 sample requirement documents
-- API documentation and architecture diagram
+AI:
+- LangChain
+- LangGraph
+- FastAPI
 
-## Quick Start
+Database:
+- MongoDB
 
-### 1. Backend
+Deployment:
+- Vercel
+- Render
+- Docker
 
-```bash
+## Key Features
+
+- User login and signup
+- Project intake form
+- AI requirement analysis
+- Multi-agent workflow
+- Task generation
+- Timeline milestones
+- Risk analysis
+- Team allocation
+- Weekly report generation
+- Email update generation
+- Analytics dashboard
+- Project history
+- Project Copilot Assistant
+
+## Project Modules
+
+- Authentication Module
+- Requirement Analysis Module
+- Multi-Agent Workflow Engine
+- Timeline Planner
+- Risk Analyzer
+- Team Allocation Engine
+- Weekly Report Generator
+- Email Generator
+- Analytics Dashboard
+- Project History Management
+- Project Copilot Assistant
+
+## Architecture Design
+
+Client Requirements
+        │
+        ▼
+ React Frontend
+        │
+        ▼
+ Node.js Backend
+        │
+        ▼
+ Multi-Agent AI Engine
+        │
+ ┌──────┼──────┐
+ ▼      ▼      ▼
+Tasks Risks Reports
+        │
+        ▼
+ MongoDB Database
+        │
+        ▼
+ Dashboard & Analytics
+
+## How It Works
+
+1. User logs in.
+2. User fills project intake form.
+3. AI analyzes requirements.
+4. Agents generate tasks, risks, milestones, team allocation, reports, and email updates.
+5. Dashboard and analytics display project insights.
+6. Project history stores previous projects.
+
+## Environment Variables
+
+### Backend (.env)
+
+```env
+PORT=5000
+CLIENT_URL=http://localhost:5173
+MONGODB_URI=mongodb://localhost:27017/pm_copilot
+JWT_SECRET=your_jwt_secret
+AI_SERVICE_URL=http://localhost:8000
+N8N_WEBHOOK_URL=http://localhost:5678/webhook/project-copilot
+```
+
+## Installation Steps
+
+### Clone Repository
+
+git clone https://github.com/23eg105t10-crypto/AI-Powered-Project-Management-Copilot.git
+cd AI-Powered-Project-Management-Copilot
+
+
+### Run Backend
+
 cd backend
-cp ../.env.example .env
 npm install
 npm run dev
-```
 
-Backend runs on `http://localhost:5000`.
 
-### 2. AI Service
+### Run AI Service
 
-```bash
-cd ai-services
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
+cd ../ai-services
+source venv/Scripts/activate
 uvicorn main:app --reload --port 8000
-```
 
-AI service runs on `http://localhost:8000`.
+### Run Frontend
 
-### 3. Frontend
-
-```bash
-cd frontend
+cd ../frontend
 npm install
 npm run dev
-```
 
-Frontend runs on `http://localhost:5173`.
+Open:
 
-## Demo Login
+http://localhost:5173
 
-Use the signup page to create users. To create admin quickly, use:
+---
 
-```bash
-curl -X POST http://localhost:5000/api/auth/signup ^
-  -H "Content-Type: application/json" ^
-  -d "{\"name\":\"Admin\",\"email\":\"admin@test.com\",\"password\":\"Admin@123\",\"role\":\"Admin\"}"
-```
+## Evaluation
 
-## Docker
+The system evaluates project planning quality using:
 
-```bash
-docker compose -f docker-compose.yml up --build
-```
+* Accuracy
+* Relevance
+* Faithfulness
+* Hallucination Rate
+* Latency
+* Cost Per Request
+* Feedback Score
 
-## Architecture
+---
 
-See `docs/architecture.md`.
+## Challenges Overcome
 
-## Deployment
+* Building a multi-agent workflow system
+* Generating timelines automatically from requirements
+* Dynamic team allocation
+* Risk identification and mitigation planning
+* Weekly report generation
+* Dashboard analytics visualization
+* Project history management
+* UI/UX optimization
+* Frontend and backend integration
 
-- Frontend: import `frontend/` into Vercel, set `VITE_API_URL`
-- Backend: deploy `backend/` on Render, set env vars from `.env.example`
-- AI service: deploy `ai-services/` as Python web service
+---
+
+## Screenshots
+
+### Login Page
+
+![alt text](image.png)
+
+### Dashboard
+
+![alt text](image-1.png)
+
+### Workspace
+
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+### Workflow
+
+![alt text](image-6.png)
+![alt text](image-7.png)
+
+### Analytics
+
+![alt text](image-8.png)
+![alt text](image-10.png)
+
+---
 
 ## Future Improvements
 
-- Replace mock LLM fallback with production OpenAI/Gemini/Claude calls
-- Add full LangSmith tracing
-- Add real Jira, Slack, Gmail OAuth
-- Add background workers for scheduled reports
+* Jira Integration
+* Slack Integration
+* Real-time Team Collaboration
+* Advanced AI Forecasting
+* Automated Sprint Planning
+* PDF/DOCX Report Export
+* Cloud-native Deployment
+* Live Notifications
+* Resource Utilization Prediction
+
+---
+
+## Author Information
+
+**Name:** B. Varshini
+
+**Roll Number:** 23EG105T10
+
+**Project:** AI-Powered Project Management Copilot
+
+**GitHub Repository:**
+https://github.com/23eg105t10-crypto/AI-Powered-Project-Management-Copilot
+
+**Demo Video:**
+https://youtu.be/WHGDY8qOkcg
