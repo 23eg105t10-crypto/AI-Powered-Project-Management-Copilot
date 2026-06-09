@@ -66,28 +66,32 @@ Deployment:
 - Project History Management
 - Project Copilot Assistant
 
+## Repository Structure
+
+frontend/      → React Frontend
+backend/       → Express Backend
+ai-services/   → AI Services & Agents
+docs/          → Project Documentation
+workflows/     → Agent Workflows
+vector-db/     → Vector Database Storage
+docker/        → Containerization Files
+deployment/    → Deployment Configurations
+
 ## Architecture Design
 
 Client Requirements
-        │
-        ▼
- React Frontend
-        │
-        ▼
- Node.js Backend
-        │
-        ▼
- Multi-Agent AI Engine
-        │
- ┌──────┼──────┐
- ▼      ▼      ▼
-Tasks Risks Reports
-        │
-        ▼
- MongoDB Database
-        │
-        ▼
- Dashboard & Analytics
+↓
+React Frontend
+↓
+Node.js Backend
+↓
+Multi-Agent AI Engine
+↓
+Tasks + Risks + Reports
+↓
+MongoDB Database
+↓
+Dashboard & Analytics
 
 ## How It Works
 
